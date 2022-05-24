@@ -18,8 +18,8 @@ public class Main {
 		
 		
 		
-		JsonPath js = ReusableMethods.rawToJson(response);
-		System.out.println(ReusableMethods.getArraySize(js,"ReturnReasons" ));
+		//JsonPath js = ReusableMethods.rawToJson(response);
+		System.out.println(response);
 		
 		
 		

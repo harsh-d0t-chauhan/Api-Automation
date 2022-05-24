@@ -13,7 +13,7 @@ public class Specifications {
 	public static RequestSpecification request() {
 		RequestSpecification req = new RequestSpecBuilder()
 				.setBaseUri("https://citymall.live")
-				.addHeader("authorization", "8a451e73-40ef-452a-b8bf-652af9bf010c")
+				.addHeader("Authorization", "8a451e73-40ef-452a-b8bf-652af9bf010c")
 				.build();
 		return req;
 	}
