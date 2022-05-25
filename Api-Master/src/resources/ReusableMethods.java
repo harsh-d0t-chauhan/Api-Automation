@@ -10,7 +10,7 @@ public class ReusableMethods {
 	}
 	
 	
-	public static String get(JsonPath js , String str) {
+	public static String getString(JsonPath js , String str) {
 		
 		String s = js.getString(str);
 		if(s == null) {
