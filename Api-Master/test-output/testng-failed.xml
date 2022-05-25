@@ -5,7 +5,8 @@
     <classes>
       <class name="api.Main">
         <methods>
-          <include name="test"/>
+          <include name="nullCheck"/>
+          <include name="authorizationCheck"/>
         </methods>
       </class> <!-- api.Main -->
     </classes>

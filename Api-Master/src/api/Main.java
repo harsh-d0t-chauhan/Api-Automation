@@ -10,34 +10,37 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.*;
 
 public class Main {
+	
+	public static ValidatableResponse getValidtableResponse() {
+		RequestSpecification req = given().spec(Specifications.request());
+		ValidatableResponse res = req.when().get("/api/cl-user/setup-4")
+				.then().spec(Specifications.response());
+		return res;
 
+	}
 	@Test
 	public  void authorizationCheck() throws Exception {
-		
-		RequestSpecification req = given().spec(Specifications.request());
-		ValidatableResponse res = req.when().get("/api/cl-user/setup-4")
-				.then().spec(Specifications.response());
-		
-		validateResponse.authanticationCheck(res);
-				
-//		String response = res.extract().asString();
-//		JsonPath js = ReusableMethods.rawToJson(response);
-//		System.out.println(response);
-//		System.out.println(ReusableMethods.getString(js, "feedStaleDelayMs"));
-//		System.out.println(ReusableMethods.getArraySize(js,"ReturnReasons"));
-		 	
+		validateResponse.authanticationCheck(Main.getValidtableResponse());		
+	 	
 	}
-	
 	@Test
 	public  void nullCheck() throws Exception {		
-		RequestSpecification req = given().spec(Specifications.request());
-		ValidatableResponse res = req.when().get("/api/cl-user/setup-4")
-				.then().spec(Specifications.response());
-		
-				validateResponse.nullCheck(res);
-
+				validateResponse.nullCheck(Main.getValidtableResponse());
+	}
 	
-		
+	
+	
+	public void test() {
+		ValidatableResponse res = Main.getValidtableResponse();
+		String response = res.extract().asString();
+		JsonPath js = ReusableMethods.rawToJson(response);
+		System.out.println(response);
+		System.out.println(ReusableMethods.getString(js, "feedStaleDelayMs"));
+		System.out.println(ReusableMethods.getArraySize(js,"ReturnReasons"));
 	}
 	
 }
+
+
+
+
