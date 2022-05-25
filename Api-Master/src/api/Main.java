@@ -2,30 +2,29 @@ package api;
 
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.ValidatableResponse;
-import io.restassured.specification.RequestSpecification;
 import resources.ReusableMethods;
 import resources.Specifications;
 import resources.validateResponse;
 import org.testng.annotations.Test;
 import static io.restassured.RestAssured.*;
 
-public class Main {
+public class Main extends Specifications {
 	
 	public static ValidatableResponse getValidtableResponse() {
-		RequestSpecification req = given().spec(Specifications.request());
-		ValidatableResponse res = req.when().get("/api/cl-user/setup-4")
-				.then().spec(Specifications.response());
+		ValidatableResponse res = given().spec(request())
+				.when().get("/api/cl-user/setup-4")
+				.then().spec(response());
 		return res;
 
 	}
 	@Test
 	public  void authorizationCheck() throws Exception {
-		validateResponse.authanticationCheck(Main.getValidtableResponse());		
+		validateResponse.authanticationCheck(getValidtableResponse());		
 	 	
 	}
 	@Test
 	public  void nullCheck() throws Exception {		
-				validateResponse.nullCheck(Main.getValidtableResponse());
+				validateResponse.nullCheck(getValidtableResponse());
 	}
 	
 	
