@@ -1,20 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-25T14:13:41 IST" name="Default suite" finished-at="2022-05-25T14:13:48 IST" duration-ms="6637">
+  <suite started-at="2022-05-26T16:46:27 IST" name="Default suite" finished-at="2022-05-26T16:46:35 IST" duration-ms="7103">
     <groups>
     </groups>
-    <test started-at="2022-05-25T14:13:41 IST" name="Default test" finished-at="2022-05-25T14:13:48 IST" duration-ms="6637">
+    <test started-at="2022-05-26T16:46:27 IST" name="Default test" finished-at="2022-05-26T16:46:35 IST" duration-ms="7103">
       <class name="api.Main">
-        <test-method signature="authorizationCheck()[pri:0, instance:api.Main@bf1ec20]" started-at="2022-05-25T14:13:42 IST" name="authorizationCheck" finished-at="2022-05-25T14:13:47 IST" duration-ms="5320" status="PASS">
+        <test-method signature="authorization_Check()[pri:0, instance:api.Main@4795ded0]" started-at="2022-05-26T16:46:28 IST" name="authorization_Check" finished-at="2022-05-26T16:46:33 IST" duration-ms="5141" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- authorizationCheck -->
-        <test-method signature="nullCheck()[pri:0, instance:api.Main@bf1ec20]" started-at="2022-05-25T14:13:47 IST" name="nullCheck" finished-at="2022-05-25T14:13:48 IST" duration-ms="1260" status="PASS">
+        </test-method> <!-- authorization_Check -->
+        <test-method signature="null_Check_Cl_Address()[pri:0, instance:api.Main@4795ded0]" started-at="2022-05-26T16:46:33 IST" name="null_Check_Cl_Address" finished-at="2022-05-26T16:46:33 IST" duration-ms="470" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- nullCheck -->
+        </test-method> <!-- null_Check_Cl_Address -->
+        <test-method signature="null_Check_Setup4()[pri:0, instance:api.Main@4795ded0]" started-at="2022-05-26T16:46:33 IST" name="null_Check_Setup4" finished-at="2022-05-26T16:46:34 IST" duration-ms="1105" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- null_Check_Setup4 -->
+        <test-method signature="null_Check_view_Cart_Cms()[pri:0, instance:api.Main@4795ded0]" started-at="2022-05-26T16:46:34 IST" name="null_Check_view_Cart_Cms" finished-at="2022-05-26T16:46:35 IST" duration-ms="299" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- null_Check_view_Cart_Cms -->
       </class> <!-- api.Main -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

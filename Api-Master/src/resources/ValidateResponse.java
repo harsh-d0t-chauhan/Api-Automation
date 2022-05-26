@@ -6,9 +6,9 @@ import static org.hamcrest.Matchers.not;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.ValidatableResponse;
 
-public class validateResponse {
-	
-	public static void nullCheck(ValidatableResponse res) {
+public class ValidateResponse {
+	static String cl_Address_Response;
+	public static void nullCheckSetup4(ValidatableResponse res) {
 		
 		res.body("appSettings", not(equalTo(null)),
 		"cancellationReasons", not(equalTo(null)),
@@ -31,11 +31,21 @@ public class validateResponse {
 		"searchSuggestionEnable", not(equalTo(null)),
 		"cxWalkthroughUI", not(equalTo(null)),
 		"currentSystemTime", not(equalTo(null)),
-		"newProductsByCategoryEnabled", not(equalTo(null)));			
-		
-		
-		
+		"newProductsByCategoryEnabled", not(equalTo(null)));				
 				
+	}
+	public static String nullCheckClAddress(ValidatableResponse res) {
+	
+				res.assertThat().body("city", not(equalTo(null)),
+				"state",not(equalTo(null)),
+				"pincode", not(equalTo(null)),
+				 "is_serviceable",not(equalTo(null)));
+		return res.extract().response().asString();
+		 
+	}
+	public static void nullCheckViewCartCms(ValidatableResponse res) {
+		res.assertThat().body("cartPage", not(equalTo(null)),
+				"oosPage",not(equalTo(null)));
 	}
 	public static void authanticationCheck(ValidatableResponse res) throws Exception {
 		
