@@ -5,7 +5,7 @@
     <classes>
       <class name="api.Main">
         <methods>
-          <include name="null_Check_Order_State"/>
+          <include name="null_Check_view_Cart_Cms"/>
         </methods>
       </class> <!-- api.Main -->
     </classes>

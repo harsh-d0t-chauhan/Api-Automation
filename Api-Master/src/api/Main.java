@@ -175,9 +175,9 @@ public class Main extends Specifications{
 				"\n---------------------------------------------------------------------------------");
 		System.out.println("response_Check_Set_One_Single_User_Id_Response:\n\n"+response_Check_Set_One_Single_User_Id_Response+
 				"\n---------------------------------------------------------------------------------");
-		System.out.println("response_Check_Add_Impression_Response:\n\n"+response_Check_Add_Impression_Response+
+		System.out.println("response_Check_Add_Impression:\n\n"+response_Check_Add_Impression_Response+
 				"\n---------------------------------------------------------------------------------");
-		System.out.println("response_Check_Checkout_Response:\n\n"+response_Check_Checkout_Response+
+		System.out.println("response_Check_Checkout:\n\n"+response_Check_Checkout_Response+
 				"\n---------------------------------------------------------------------------------");
 						
 	}
