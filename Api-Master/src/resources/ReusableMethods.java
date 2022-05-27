@@ -29,11 +29,10 @@ public class ReusableMethods {
 	}
 	
 	public static String genrateResponse(ValidatableResponse res,String[] str) {
-		String response = res.extract().response().asString();
-		JsonPath js = new JsonPath(response);
+		
 		String string = "";
 		for(String s : str) {
-			string = string +s+" : "+js.getString(s)+"\n";
+			string = string +s+" : "+getString(res,s)+"\n";
 		}
 	return string;
 	}

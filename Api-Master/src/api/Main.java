@@ -2,7 +2,6 @@ package api;
 
 import io.restassured.response.ValidatableResponse;
 import resources.Payload;
-import resources.ReusableMethods;
 import resources.Specifications;
 import resources.ValidateResponse;
 import org.testng.annotations.Test;
@@ -12,6 +11,18 @@ import java.io.FileNotFoundException;
 
 public class Main extends Specifications{
 	String null_Check_Cl_Address_Response;
+	String null_Check_view_Cart_Cms_Response;
+	String null_Check_Get_Coupons_Response;
+	String null_Check_Order_State_Response;
+	String null_Check_Get_City_From_Pincode_Response;
+	String null_Check_Checkout_Response;
+	String null_Check_Order_Details_Response;
+	String null_Check_Order_Details;
+	String response_Check_Set_One_Single_User_Id_Response;
+	String response_Check_Add_Impression_Response;
+	String response_Check_Checkout_Response;
+	
+	
 	
 	public static ValidatableResponse getSetup4() throws FileNotFoundException {
 		ValidatableResponse res = given().spec(request())
@@ -100,56 +111,75 @@ public class Main extends Specifications{
 		
 	
 	}
-	@Test
+	@Test(priority = 1)
 	public void null_Check_view_Cart_Cms() throws FileNotFoundException {
-		ValidateResponse.nullCheckViewCartCms(getViewCartCms());
-	}
-	@Test 
-	public void null_Check_Get_Coupons() throws FileNotFoundException {
-		ValidateResponse.nullCheckCoupons(getCoupons());
-	}
-	@Test
-	public void null_Check_Order_State() throws FileNotFoundException {
-		ValidateResponse.nullCheckOrderState(getOrderState());
-	}
-	@Test
-	public void null_Check_Get_City_From_Pincode() throws FileNotFoundException {
-		ValidateResponse.nullCheckPincode(getCityFromPinCode());
-	}
-	
-	
-	@Test
-	public void null_Check_Checkout() throws FileNotFoundException {
-		ValidateResponse.nullCheckCheckout(getCheckOut());
-	}
-	@Test
-	public void null_Check_Order_Details() throws FileNotFoundException {
-		ValidateResponse.nullCheckOrderDetails(getOrderDetails());
-		
-	}
-	@Test
-	public void response_Check_Set_One_Single_User_Id() throws FileNotFoundException {
-		ValidateResponse.responseCheckSetOneSingleUserId(getSetOneSingleUserId());
+		null_Check_view_Cart_Cms_Response = ValidateResponse.nullCheckViewCartCms(getViewCartCms());
 	}
 	@Test(priority = 2)
-	public void response_Check_Add_Impression() throws FileNotFoundException {
-		ValidateResponse.responseCheckAddImpression(getAddImpression());
+	public void null_Check_Get_Coupons() throws FileNotFoundException {
+		null_Check_Get_Coupons_Response = ValidateResponse.nullCheckCoupons(getCoupons());
+	}
+	@Test(priority = 3)
+	public void null_Check_Order_State() throws FileNotFoundException {
+		null_Check_Order_State_Response = ValidateResponse.nullCheckOrderState(getOrderState());
+	}
+	@Test(priority = 4)
+	public void null_Check_Get_City_From_Pincode() throws FileNotFoundException {
+		null_Check_Get_City_From_Pincode_Response = ValidateResponse.nullCheckPincode(getCityFromPinCode());
+	}
+	
+	
+	@Test(priority = 5)
+	public void null_Check_Checkout() throws FileNotFoundException {
+		null_Check_Checkout_Response = ValidateResponse.nullCheckCheckout(getCheckOut());
+	}
+	@Test(priority = 6)
+	public void null_Check_Order_Details() throws FileNotFoundException {
+		null_Check_Order_Details_Response = ValidateResponse.nullCheckOrderDetails(getOrderDetails());
+		
+	}
+	@Test(priority = 7)
+	public void response_Check_Set_One_Single_User_Id() throws FileNotFoundException {
+		response_Check_Set_One_Single_User_Id_Response =ValidateResponse.responseCheckSetOneSingleUserId(getSetOneSingleUserId());
+	}
+	@Test(priority = 8)
+	public void response_Check_Add_Impression() throws Exception {
+		response_Check_Add_Impression_Response = ValidateResponse.responseCheckAddImpression(getAddImpression());
 		
 
 	}
-	@Test
+	@Test(priority = 9)
 	public void response_Check_Checkout() throws FileNotFoundException {
-		ValidateResponse.responseCheckout(getCheckOut());
+		response_Check_Checkout_Response = ValidateResponse.responseCheckout(getCheckOut());
 		
 	}
 	
 	
+	
+	@Test(priority = 100)
 	public void print() throws FileNotFoundException {
 		
-		String response = getSetup4().extract().asString();
-		System.out.println(response);
-		System.out.println(ReusableMethods.getString(getSetup4(), "feedStaleDelayMs"));
-		System.out.println(ReusableMethods.getArraySize(getSetup4(),"ReturnReasons"));
+		System.out.println("null_Check_Cl_Address_Response:\n\n"+null_Check_Cl_Address_Response+
+				"\n---------------------------------------------------------------------------------");
+		System.out.println("null_Check_view_Cart_Cms_Response:\n\n"+null_Check_view_Cart_Cms_Response+
+				"\n---------------------------------------------------------------------------------");
+		System.out.println("null_Check_Get_Coupons_Response:\n\n"+null_Check_Get_Coupons_Response+
+				"\n---------------------------------------------------------------------------------");
+		System.out.println("null_Check_Order_State_Response:\n\n"+null_Check_Order_State_Response+
+				"\n---------------------------------------------------------------------------------");
+		System.out.println("null_Check_Get_City_From_Pincode_Response:\n\n"+null_Check_Get_City_From_Pincode_Response+
+				"\n---------------------------------------------------------------------------------");
+		System.out.println("null_Check_Checkout_Response:\n\n"+null_Check_Checkout_Response+
+				"\n---------------------------------------------------------------------------------");
+		System.out.println("null_Check_Order_Details_Response:\n\n"+null_Check_Order_Details_Response+
+				"\n---------------------------------------------------------------------------------");
+		System.out.println("response_Check_Set_One_Single_User_Id_Response:\n\n"+response_Check_Set_One_Single_User_Id_Response+
+				"\n---------------------------------------------------------------------------------");
+		System.out.println("response_Check_Add_Impression_Response:\n\n"+response_Check_Add_Impression_Response+
+				"\n---------------------------------------------------------------------------------");
+		System.out.println("response_Check_Checkout_Response:\n\n"+response_Check_Checkout_Response+
+				"\n---------------------------------------------------------------------------------");
+						
 	}
 	
 	

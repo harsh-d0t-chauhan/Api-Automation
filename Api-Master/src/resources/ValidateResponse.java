@@ -7,8 +7,8 @@ import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.ValidatableResponse;
 
-public class ValidateResponse {
-	static String cl_Address_Response;
+public class ValidateResponse extends ReusableMethods {
+
 	public static void nullCheckSetup4(ValidatableResponse res) {
 		
 		res.body("appSettings", not(equalTo(null)),
@@ -42,36 +42,58 @@ public class ValidateResponse {
 				"pincode", not(equalTo(null)),
 				 "is_serviceable",not(equalTo(null)));
 				String [] str = {"city","state","pincode","is_serviceable"};
-		return ReusableMethods.genrateResponse(res,str);
+		return genrateResponse(res,str);
 		 
 	}
-	public static void nullCheckViewCartCms(ValidatableResponse res) {
+	public static String nullCheckViewCartCms(ValidatableResponse res) {
 		res.assertThat().body("cartPage", not(equalTo(null)),
 				"oosPage",not(equalTo(null)));
+		String [] str = {"cartPage","oosPage"};
+		return genrateResponse(res,str);
 	}
-	public static void nullCheckCoupons(ValidatableResponse res) {
+	public static String nullCheckCoupons(ValidatableResponse res) {
 		res.body("coupons", not(equalTo(null)));
+		String [] str = {"coupons"};
+		return genrateResponse(res, str);
 	}
-	public static void nullCheckOrderState(ValidatableResponse res) {
+	public static String nullCheckOrderState(ValidatableResponse res) {
 		res.body("order_state_details", not(equalTo(null)));
+		String [] str = {"order_state_details"};
+		return genrateResponse(res, str);
+
 	}
-	public static void nullCheckPincode(ValidatableResponse res) {
+	public static String nullCheckPincode(ValidatableResponse res) {
 		res.body("city", not(equalTo(null)));
+		String [] str = {"city"};
+		return genrateResponse(res, str);
 	}
-	public static void nullCheckCheckout(ValidatableResponse res) {
+	public static String nullCheckCheckout(ValidatableResponse res) {
 		res.assertThat().body("checkoutPage",not(equalTo(null)));
+		String [] str = {"checkoutPage"};
+		return genrateResponse(res, str);
 	}
-	public static void nullCheckOrderDetails(ValidatableResponse res) {
+	public static String nullCheckOrderDetails(ValidatableResponse res) {
 		res.assertThat().body("order_id",not(equalTo(null)));
+		String [] str = {"order_id"};
+		return genrateResponse(res, str);
+
 	}
-	public static void responseCheckSetOneSingleUserId(ValidatableResponse res) {
+	public static String responseCheckSetOneSingleUserId(ValidatableResponse res) {
 		res.body("message",equalTo("CONFIGS_SET_SUCCESSFULLY"));
+		String [] str = {"message"};
+		return genrateResponse(res, str);
+
 	}
-	public static void responseCheckAddImpression(ValidatableResponse res) {
-		res.assertThat().contentType(ContentType.TEXT).extract().response().body().asString().equalsIgnoreCase("success");
+	public static String responseCheckAddImpression(ValidatableResponse res) throws Exception {
+		String str = res.assertThat().contentType(ContentType.TEXT).extract().response().body().asString();
+		if(str.equals("success")==false)
+			throw new Exception("not getting success in response"); 
+		return	str;
 	}
-	public static void responseCheckout(ValidatableResponse res) {
+	public static String responseCheckout(ValidatableResponse res) {
 		res.assertThat().body("oosPage",not(equalTo(null)));
+		String [] str = {"oosPage"};
+		return genrateResponse(res,str);
 	}
 	public static void authanticationCheck(ValidatableResponse res) throws Exception {
 		
