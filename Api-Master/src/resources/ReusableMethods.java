@@ -1,6 +1,9 @@
 package resources;
 
+
+
 import io.restassured.path.json.JsonPath;
+import io.restassured.response.ValidatableResponse;
 
 public class ReusableMethods {
 	
@@ -10,8 +13,8 @@ public class ReusableMethods {
 	}
 	
 	
-	public static String getString(JsonPath js , String str) {
-		
+	public static String getString(ValidatableResponse res , String str) {
+		JsonPath js = new JsonPath(res.extract().response().asString());
 		String s = js.getString(str);
 		if(s == null) {
 			return "Please enter valid key";
@@ -20,8 +23,19 @@ public class ReusableMethods {
 			return s;
 		}
 	
-	public static int getArraySize(JsonPath js,String str) {
+	public static int getArraySize(ValidatableResponse res,String str) {
+		JsonPath js = new JsonPath(res.extract().response().asString());
 		return js.getInt(str+".size");
+	}
+	
+	public static String genrateResponse(ValidatableResponse res,String[] str) {
+		String response = res.extract().response().asString();
+		JsonPath js = new JsonPath(response);
+		String string = "";
+		for(String s : str) {
+			string = string +s+" : "+js.getString(s)+"\n";
+		}
+	return string;
 	}
 
 }

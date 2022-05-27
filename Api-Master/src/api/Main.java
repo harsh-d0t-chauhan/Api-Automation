@@ -1,7 +1,7 @@
 package api;
 
-import io.restassured.path.json.JsonPath;
 import io.restassured.response.ValidatableResponse;
+import resources.Payload;
 import resources.ReusableMethods;
 import resources.Specifications;
 import resources.ValidateResponse;
@@ -11,7 +11,7 @@ import static io.restassured.RestAssured.*;
 import java.io.FileNotFoundException;
 
 public class Main extends Specifications{
-	String cl_Address_Response;
+	String null_Check_Cl_Address_Response;
 	
 	public static ValidatableResponse getSetup4() throws FileNotFoundException {
 		ValidatableResponse res = given().spec(request())
@@ -20,6 +20,22 @@ public class Main extends Specifications{
 		return res;
 
 	}
+	public static ValidatableResponse getSetOneSingleUserId() throws FileNotFoundException {
+		ValidatableResponse res = given().spec(request()).body(Payload.set_One_Single_User_Id_Payload())
+				.when().post("/api/cl-user/set-one-signal-user-id")
+				.then().spec(response());
+		return res;
+
+	}
+	public static ValidatableResponse getAddImpression() throws FileNotFoundException {
+		ValidatableResponse res = given().spec(request()).body(Payload.add_Impression_Payload())
+				.when().post("/api/analytics/add-impression/14312083")
+				.then().spec(response());
+		return res;
+
+	}
+
+
 	public static ValidatableResponse getClUserAddress() throws FileNotFoundException {
 		ValidatableResponse res = given().spec(request())
 				.when().get("/api/cl-user/profile/address")
@@ -41,7 +57,8 @@ public class Main extends Specifications{
 	}
 	
 	public static ValidatableResponse getOrderState() throws FileNotFoundException {
-		ValidatableResponse res = given().spec(request()).queryParam("order_id","%2011165844")
+		//String order_id = "%2011165844";
+		ValidatableResponse res = given().urlEncodingEnabled(false).spec(request()).queryParam("order_id","011165844")
 				.when().get("/api/cl-user/v3/order-states")
 				.then().spec(response());
 		return res;
@@ -74,29 +91,65 @@ public class Main extends Specifications{
 	@Test
 	public  void null_Check_Setup4() throws Exception {		
 				ValidateResponse.nullCheckSetup4(getSetup4());
+				
 	}
 	
-	@Test
+	@Test(priority = 0)
 	public void null_Check_Cl_Address() throws FileNotFoundException {
-		cl_Address_Response = ValidateResponse.nullCheckClAddress(getClUserAddress());
-		//System.out.println(cl_Address_Response);
+		null_Check_Cl_Address_Response = ValidateResponse.nullCheckClAddress(getClUserAddress());
+		
 	
 	}
 	@Test
 	public void null_Check_view_Cart_Cms() throws FileNotFoundException {
 		ValidateResponse.nullCheckViewCartCms(getViewCartCms());
 	}
+	@Test 
+	public void null_Check_Get_Coupons() throws FileNotFoundException {
+		ValidateResponse.nullCheckCoupons(getCoupons());
+	}
+	@Test
+	public void null_Check_Order_State() throws FileNotFoundException {
+		ValidateResponse.nullCheckOrderState(getOrderState());
+	}
+	@Test
+	public void null_Check_Get_City_From_Pincode() throws FileNotFoundException {
+		ValidateResponse.nullCheckPincode(getCityFromPinCode());
+	}
 	
 	
+	@Test
+	public void null_Check_Checkout() throws FileNotFoundException {
+		ValidateResponse.nullCheckCheckout(getCheckOut());
+	}
+	@Test
+	public void null_Check_Order_Details() throws FileNotFoundException {
+		ValidateResponse.nullCheckOrderDetails(getOrderDetails());
+		
+	}
+	@Test
+	public void response_Check_Set_One_Single_User_Id() throws FileNotFoundException {
+		ValidateResponse.responseCheckSetOneSingleUserId(getSetOneSingleUserId());
+	}
+	@Test(priority = 2)
+	public void response_Check_Add_Impression() throws FileNotFoundException {
+		ValidateResponse.responseCheckAddImpression(getAddImpression());
+		
+
+	}
+	@Test
+	public void response_Check_Checkout() throws FileNotFoundException {
+		ValidateResponse.responseCheckout(getCheckOut());
+		
+	}
 	
 	
-	public void test() throws FileNotFoundException {
-		ValidatableResponse res = Main.getSetup4();
-		String response = res.extract().asString();
-		JsonPath js = ReusableMethods.rawToJson(response);
+	public void print() throws FileNotFoundException {
+		
+		String response = getSetup4().extract().asString();
 		System.out.println(response);
-		System.out.println(ReusableMethods.getString(js, "feedStaleDelayMs"));
-		System.out.println(ReusableMethods.getArraySize(js,"ReturnReasons"));
+		System.out.println(ReusableMethods.getString(getSetup4(), "feedStaleDelayMs"));
+		System.out.println(ReusableMethods.getArraySize(getSetup4(),"ReturnReasons"));
 	}
 	
 	

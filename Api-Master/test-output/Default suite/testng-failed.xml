@@ -5,8 +5,7 @@
     <classes>
       <class name="api.Main">
         <methods>
-          <include name="nullCheck"/>
-          <include name="authorizationCheck"/>
+          <include name="null_Check_Order_State"/>
         </methods>
       </class> <!-- api.Main -->
     </classes>

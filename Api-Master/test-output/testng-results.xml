@@ -1,28 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-26T16:46:27 IST" name="Default suite" finished-at="2022-05-26T16:46:35 IST" duration-ms="7103">
+  <suite started-at="2022-05-27T10:43:49 IST" name="Default suite" finished-at="2022-05-27T10:43:58 IST" duration-ms="9312">
     <groups>
     </groups>
-    <test started-at="2022-05-26T16:46:27 IST" name="Default test" finished-at="2022-05-26T16:46:35 IST" duration-ms="7103">
+    <test started-at="2022-05-27T10:43:49 IST" name="Default test" finished-at="2022-05-27T10:43:58 IST" duration-ms="9312">
       <class name="api.Main">
-        <test-method signature="authorization_Check()[pri:0, instance:api.Main@4795ded0]" started-at="2022-05-26T16:46:28 IST" name="authorization_Check" finished-at="2022-05-26T16:46:33 IST" duration-ms="5141" status="PASS">
+        <test-method signature="authorization_Check()[pri:0, instance:api.Main@3e14c16d]" started-at="2022-05-27T10:43:49 IST" name="authorization_Check" finished-at="2022-05-27T10:43:55 IST" duration-ms="5749" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- authorization_Check -->
-        <test-method signature="null_Check_Cl_Address()[pri:0, instance:api.Main@4795ded0]" started-at="2022-05-26T16:46:33 IST" name="null_Check_Cl_Address" finished-at="2022-05-26T16:46:33 IST" duration-ms="470" status="PASS">
+        <test-method signature="null_Check_Checkout()[pri:0, instance:api.Main@3e14c16d]" started-at="2022-05-27T10:43:55 IST" name="null_Check_Checkout" finished-at="2022-05-27T10:43:55 IST" duration-ms="399" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- null_Check_Checkout -->
+        <test-method signature="null_Check_Cl_Address()[pri:0, instance:api.Main@3e14c16d]" started-at="2022-05-27T10:43:55 IST" name="null_Check_Cl_Address" finished-at="2022-05-27T10:43:55 IST" duration-ms="327" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- null_Check_Cl_Address -->
-        <test-method signature="null_Check_Setup4()[pri:0, instance:api.Main@4795ded0]" started-at="2022-05-26T16:46:33 IST" name="null_Check_Setup4" finished-at="2022-05-26T16:46:34 IST" duration-ms="1105" status="PASS">
+        <test-method signature="null_Check_Get_City_From_Pincode()[pri:0, instance:api.Main@3e14c16d]" started-at="2022-05-27T10:43:55 IST" name="null_Check_Get_City_From_Pincode" finished-at="2022-05-27T10:43:56 IST" duration-ms="161" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- null_Check_Get_City_From_Pincode -->
+        <test-method signature="null_Check_Get_Coupons()[pri:0, instance:api.Main@3e14c16d]" started-at="2022-05-27T10:43:56 IST" name="null_Check_Get_Coupons" finished-at="2022-05-27T10:43:56 IST" duration-ms="271" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- null_Check_Get_Coupons -->
+        <test-method signature="null_Check_Order_Details()[pri:0, instance:api.Main@3e14c16d]" started-at="2022-05-27T10:43:56 IST" name="null_Check_Order_Details" finished-at="2022-05-27T10:43:56 IST" duration-ms="192" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- null_Check_Order_Details -->
+        <test-method signature="null_Check_Order_State()[pri:0, instance:api.Main@3e14c16d]" started-at="2022-05-27T10:43:56 IST" name="null_Check_Order_State" finished-at="2022-05-27T10:43:56 IST" duration-ms="177" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- null_Check_Order_State -->
+        <test-method signature="null_Check_Setup4()[pri:0, instance:api.Main@3e14c16d]" started-at="2022-05-27T10:43:56 IST" name="null_Check_Setup4" finished-at="2022-05-27T10:43:57 IST" duration-ms="1183" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- null_Check_Setup4 -->
-        <test-method signature="null_Check_view_Cart_Cms()[pri:0, instance:api.Main@4795ded0]" started-at="2022-05-26T16:46:34 IST" name="null_Check_view_Cart_Cms" finished-at="2022-05-26T16:46:35 IST" duration-ms="299" status="PASS">
+        <test-method signature="null_Check_view_Cart_Cms()[pri:0, instance:api.Main@3e14c16d]" started-at="2022-05-27T10:43:57 IST" name="null_Check_view_Cart_Cms" finished-at="2022-05-27T10:43:58 IST" duration-ms="206" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- null_Check_view_Cart_Cms -->
+        <test-method signature="response_Check_Checkout()[pri:0, instance:api.Main@3e14c16d]" started-at="2022-05-27T10:43:58 IST" name="response_Check_Checkout" finished-at="2022-05-27T10:43:58 IST" duration-ms="216" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- response_Check_Checkout -->
+        <test-method signature="response_Check_Set_One_Single_User_Id()[pri:0, instance:api.Main@3e14c16d]" started-at="2022-05-27T10:43:58 IST" name="response_Check_Set_One_Single_User_Id" finished-at="2022-05-27T10:43:58 IST" duration-ms="179" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- response_Check_Set_One_Single_User_Id -->
+        <test-method signature="response_Check_Add_Impression()[pri:2, instance:api.Main@3e14c16d]" started-at="2022-05-27T10:43:58 IST" name="response_Check_Add_Impression" finished-at="2022-05-27T10:43:58 IST" duration-ms="124" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- response_Check_Add_Impression -->
       </class> <!-- api.Main -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
