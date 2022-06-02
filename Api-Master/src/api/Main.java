@@ -1,184 +1,166 @@
 package api;
 
-import io.restassured.response.ValidatableResponse;
+import io.restassured.response.Response;
 import resources.Payload;
+import resources.ReusableMethods;
 import resources.Specifications;
+import resources.Url;
 import resources.ValidateResponse;
 import org.testng.annotations.Test;
 import static io.restassured.RestAssured.*;
-
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+
 
 public class Main extends Specifications{
-	String null_Check_Cl_Address_Response;
-	String null_Check_view_Cart_Cms_Response;
-	String null_Check_Get_Coupons_Response;
-	String null_Check_Order_State_Response;
-	String null_Check_Get_City_From_Pincode_Response;
-	String null_Check_Checkout_Response;
-	String null_Check_Order_Details_Response;
-	String null_Check_Order_Details;
-	String response_Check_Set_One_Single_User_Id_Response;
-	String response_Check_Add_Impression_Response;
-	String response_Check_Checkout_Response;
+	ArrayList<String> null_Check_Cl_Address_Response = new ArrayList<String>();
+	ArrayList<String> null_Check_view_Cart_Cms_Response = new ArrayList<String>();
+	ArrayList<String> null_Check_Get_Coupons_Response = new ArrayList<String>();
+	ArrayList<String> null_Check_Order_State_Response = new ArrayList<String>();
+	ArrayList<String> null_Check_Get_City_From_Pincode_Response = new ArrayList<String>();
+	ArrayList<String> null_Check_Checkout_Response = new ArrayList<String>();
+	ArrayList<String> null_Check_Order_Details_Response = new ArrayList<String>();
+	ArrayList<String> null_Check_Order_Details= new ArrayList<String>();
+	ArrayList<String> response_Check_Set_One_Single_User_Id_Response = new ArrayList<String>();
+	ArrayList<String> response_Check_Add_Impression_Response = new ArrayList<String>();
+	ArrayList<String> response_Check_Checkout_Response = new ArrayList<String>();
 	
 	
 	
-	public static ValidatableResponse getSetup4() throws FileNotFoundException {
-		ValidatableResponse res = given().spec(request())
-				.when().get("/api/cl-user/setup-4")
-				.then().spec(response());
+	public static Response getSetup4(String endpoint) throws FileNotFoundException {
+		Response res = given().spec(request())
+				.when().get(endpoint);
 		return res;
 
 	}
-	public static ValidatableResponse getSetOneSingleUserId() throws FileNotFoundException {
-		ValidatableResponse res = given().spec(request()).body(Payload.set_One_Single_User_Id_Payload())
-				.when().post("/api/cl-user/set-one-signal-user-id")
-				.then().spec(response());
+	public static Response getOneSingleUserId(String endpoint) throws FileNotFoundException {
+		Response res = given().spec(request()).body(Payload.set_One_Single_User_Id_Payload())
+				.when().post(endpoint);
 		return res;
 
 	}
-	public static ValidatableResponse getAddImpression() throws FileNotFoundException {
-		ValidatableResponse res = given().spec(request()).body(Payload.add_Impression_Payload())
-				.when().post("/api/analytics/add-impression/14312083")
-				.then().spec(response());
+	public static Response getAddImpression(String endpoint) throws FileNotFoundException {
+		Response res = given().spec(request()).body(Payload.add_Impression_Payload())
+				.when().post(endpoint);
 		return res;
 
 	}
 
-
-	public static ValidatableResponse getClUserAddress() throws FileNotFoundException {
-		ValidatableResponse res = given().spec(request())
-				.when().get("/api/cl-user/profile/address")
-				.then().spec(response());
-		return res;
-
+	
+	public static  Response getClUserAddress(String endpoint) throws FileNotFoundException {
+			Response res =	given().spec(request())
+					.when().get(endpoint);
+					return res;
 	}
-	public static ValidatableResponse getViewCartCms() throws FileNotFoundException {
-		ValidatableResponse res = given().spec(request())
-				.when().get("/api/cl-user/view-cart-cms")
-				.then().spec(response());
+	public static Response getViewCartCms(String endpoint) throws FileNotFoundException {
+		Response res = given().spec(request())
+				.when().get(endpoint);
 		return res;
 	}
-	public static ValidatableResponse getCoupons() throws FileNotFoundException {
-		ValidatableResponse res = given().spec(request())
-				.when().get("/api/cl-user/get-coupons")
-				.then().spec(response());
+	public static Response getCoupons(String endpoint) throws FileNotFoundException {
+		Response res = given().spec(request())
+				.when().get(endpoint);
 		return res;
 	}
 	
-	public static ValidatableResponse getOrderState() throws FileNotFoundException {
-		//String order_id = "%2011165844";
-		ValidatableResponse res = given().urlEncodingEnabled(false).spec(request()).queryParam("order_id","011165844")
-				.when().get("/api/cl-user/v3/order-states")
-				.then().spec(response());
+	public static Response getOrderState(String endpoint) throws FileNotFoundException {
+
+		Response res = given().urlEncodingEnabled(false).spec(request()).queryParam("order_id","011165844")
+				.when().get(endpoint);
 		return res;
 	}
-	public static ValidatableResponse getCityFromPinCode() throws FileNotFoundException {
-		ValidatableResponse res = given().spec(request())
-				.when().get("/api/cl-user/get-city-from-pincode/122012")
-				.then().spec(response());
+	public static Response getCityFromPinCode(String endpoint) throws FileNotFoundException {
+		Response res = given().spec(request())
+				.when().get(endpoint);
 		return res;
 	}
-	public static ValidatableResponse getCheckOut() throws FileNotFoundException {
-		ValidatableResponse res = given().spec(request())
-				.when().get("/api/cl-user/v2/checkout")
-				.then().spec(response());
+	public static Response getCheckOut(String endpoint) throws FileNotFoundException {
+		Response res = given().spec(request())
+				.when().get(endpoint);
 		return res;
 	}
-	public static ValidatableResponse getOrderDetails() throws FileNotFoundException {
-		ValidatableResponse res = given().spec(request())
-				.when().get("/api/cl-user/order-details-2/11165844")
-				.then().spec(response());
+	public static Response getOrderDetails(String endpoint) throws FileNotFoundException {
+		Response res = given().spec(request())
+				.when().get(endpoint);
 		return res;
 	}
 
 
-	@Test
-	public  void authorization_Check() throws Exception {
-		ValidateResponse.authanticationCheck(getSetup4());		
+	@Test(priority = 0,dataProvider = "Setup4",dataProviderClass = Url.class)
+	public  void authorization_Check(String endpoint,int expectedStatusCode) throws Exception {
+		ValidateResponse.authanticationCheck(getSetup4(endpoint),expectedStatusCode);		
 	 	
 	}
-	@Test
-	public  void null_Check_Setup4() throws Exception {		
-				ValidateResponse.nullCheckSetup4(getSetup4());
+	@Test(priority = 1,dataProvider = "Setup4",dataProviderClass = Url.class)
+	public  void null_Check_Setup4(String endpoint,int expectedStatusCode) throws Exception {		
+				ValidateResponse.nullCheckSetup4(getSetup4(endpoint),expectedStatusCode);
 				
 	}
 	
-	@Test(priority = 0)
-	public void null_Check_Cl_Address() throws FileNotFoundException {
-		null_Check_Cl_Address_Response = ValidateResponse.nullCheckClAddress(getClUserAddress());
+	@Test(priority = 2,dataProvider = "address",dataProviderClass = Url.class)
+	public void null_Check_Cl_Address(String endpoint,int expectedStatusCode) throws FileNotFoundException {
+			null_Check_Cl_Address_Response.add( ValidateResponse.nullCheckClAddress(getClUserAddress(endpoint),expectedStatusCode));
 		
 	
 	}
-	@Test(priority = 1)
-	public void null_Check_view_Cart_Cms() throws FileNotFoundException {
-		null_Check_view_Cart_Cms_Response = ValidateResponse.nullCheckViewCartCms(getViewCartCms());
+	@Test(priority = 3,dataProvider = "ViewCartCms",dataProviderClass = Url.class)
+	public void null_Check_view_Cart_Cms(String endpoint,int expectedStatusCode) throws FileNotFoundException {
+		null_Check_view_Cart_Cms_Response.add( ValidateResponse.nullCheckViewCartCms(getViewCartCms(endpoint),expectedStatusCode));
 	}
-	@Test(priority = 2)
-	public void null_Check_Get_Coupons() throws FileNotFoundException {
-		null_Check_Get_Coupons_Response = ValidateResponse.nullCheckCoupons(getCoupons());
+	@Test(priority = 4,dataProvider = "Coupons",dataProviderClass = Url.class)
+	public void null_Check_Get_Coupons(String endpoint,int expectedStatusCode) throws FileNotFoundException {
+		null_Check_Get_Coupons_Response.add(ValidateResponse.nullCheckCoupons(getCoupons(endpoint),expectedStatusCode));
 	}
-	@Test(priority = 3)
-	public void null_Check_Order_State() throws FileNotFoundException {
-		null_Check_Order_State_Response = ValidateResponse.nullCheckOrderState(getOrderState());
+	@Test(priority = 5,dataProvider = "OrderState",dataProviderClass = Url.class)
+	public void null_Check_Order_State(String endpoint,int expectedStatusCode) throws FileNotFoundException {
+		null_Check_Order_State_Response.add(ValidateResponse.nullCheckOrderState(getOrderState(endpoint),expectedStatusCode));
 	}
-	@Test(priority = 4)
-	public void null_Check_Get_City_From_Pincode() throws FileNotFoundException {
-		null_Check_Get_City_From_Pincode_Response = ValidateResponse.nullCheckPincode(getCityFromPinCode());
+	@Test(priority = 6,dataProvider = "CityFromPinCode",dataProviderClass = Url.class)
+	public void null_Check_Get_City_From_Pincode(String endpoint,int expectedStatusCode) throws FileNotFoundException {
+		null_Check_Get_City_From_Pincode_Response.add(ValidateResponse.nullCheckPincode(getCityFromPinCode(endpoint),expectedStatusCode));
 	}
 	
-	
-	@Test(priority = 5)
-	public void null_Check_Checkout() throws FileNotFoundException {
-		null_Check_Checkout_Response = ValidateResponse.nullCheckCheckout(getCheckOut());
+	@Test(priority = 7,dataProvider = "CheckOut",dataProviderClass = Url.class)
+	public void null_Check_Checkout(String endpoint,int expectedStatusCode) throws FileNotFoundException {
+		null_Check_Checkout_Response.add(ValidateResponse.nullCheckCheckout(getCheckOut(endpoint),expectedStatusCode));
 	}
-	@Test(priority = 6)
-	public void null_Check_Order_Details() throws FileNotFoundException {
-		null_Check_Order_Details_Response = ValidateResponse.nullCheckOrderDetails(getOrderDetails());
+	@Test(priority = 8,dataProvider = "OrderDetails",dataProviderClass = Url.class)
+	public void null_Check_Order_Details(String endpoint,int expectedStatusCode) throws FileNotFoundException {
+		null_Check_Order_Details_Response.add(ValidateResponse.nullCheckOrderDetails(getOrderDetails(endpoint),expectedStatusCode));
 		
 	}
-	@Test(priority = 7)
-	public void response_Check_Set_One_Single_User_Id() throws FileNotFoundException {
-		response_Check_Set_One_Single_User_Id_Response =ValidateResponse.responseCheckSetOneSingleUserId(getSetOneSingleUserId());
+	@Test(priority = 9,dataProvider = "OneSingleUserId",dataProviderClass = Url.class)
+	public void response_Check_Set_One_Single_User_Id(String endpoint,int expectedStatusCode) throws FileNotFoundException {
+		response_Check_Set_One_Single_User_Id_Response.add(ValidateResponse.responseCheckSetOneSingleUserId(getOneSingleUserId(endpoint),expectedStatusCode));
 	}
-	@Test(priority = 8)
-	public void response_Check_Add_Impression() throws Exception {
-		response_Check_Add_Impression_Response = ValidateResponse.responseCheckAddImpression(getAddImpression());
+	@Test(priority = 10,dataProvider = "addImpression",dataProviderClass = Url.class)
+	public void response_Check_Add_Impression(String endpoint,int expectedStatusCode) throws Exception {
+		response_Check_Add_Impression_Response.add(ValidateResponse.responseCheckAddImpression(getAddImpression(endpoint),expectedStatusCode));
 		
 
 	}
-	@Test(priority = 9)
-	public void response_Check_Checkout() throws FileNotFoundException {
-		response_Check_Checkout_Response = ValidateResponse.responseCheckout(getCheckOut());
-		
-	}
+
 	
 	
 	
 	@Test(priority = 100)
-	public void print() throws FileNotFoundException {
+	public void print() throws FileNotFoundException {	
+		HashMap<String,ArrayList<String>> map=new HashMap<String,ArrayList<String>>(){{
+			put("null_Check_Cl_Address_Response", null_Check_Cl_Address_Response);
+			put("null_Check_view_Cart_Cms_Response",null_Check_view_Cart_Cms_Response);
+			put("null_Check_Get_Coupons_Response",null_Check_Get_Coupons_Response);
+			put("null_Check_Order_State_Response",null_Check_Order_State_Response);
+			put("null_Check_Get_City_From_Pincode_Response",null_Check_Get_City_From_Pincode_Response);
+			put("null_Check_Checkout_Response",null_Check_Checkout_Response);
+			put("null_Check_Order_Details_Response",null_Check_Order_Details_Response);
+			put("response_Check_Set_One_Single_User_Id_Response",response_Check_Set_One_Single_User_Id_Response);
+			put("response_Check_Add_Impression_Response",response_Check_Add_Impression_Response);
+						
+		}}; 
+		ReusableMethods.printResponse(map);
 		
-		System.out.println("null_Check_Cl_Address_Response:\n\n"+null_Check_Cl_Address_Response+
-				"\n---------------------------------------------------------------------------------");
-		System.out.println("null_Check_view_Cart_Cms_Response:\n\n"+null_Check_view_Cart_Cms_Response+
-				"\n---------------------------------------------------------------------------------");
-		System.out.println("null_Check_Get_Coupons_Response:\n\n"+null_Check_Get_Coupons_Response+
-				"\n---------------------------------------------------------------------------------");
-		System.out.println("null_Check_Order_State_Response:\n\n"+null_Check_Order_State_Response+
-				"\n---------------------------------------------------------------------------------");
-		System.out.println("null_Check_Get_City_From_Pincode_Response:\n\n"+null_Check_Get_City_From_Pincode_Response+
-				"\n---------------------------------------------------------------------------------");
-		System.out.println("null_Check_Checkout_Response:\n\n"+null_Check_Checkout_Response+
-				"\n---------------------------------------------------------------------------------");
-		System.out.println("null_Check_Order_Details_Response:\n\n"+null_Check_Order_Details_Response+
-				"\n---------------------------------------------------------------------------------");
-		System.out.println("response_Check_Set_One_Single_User_Id_Response:\n\n"+response_Check_Set_One_Single_User_Id_Response+
-				"\n---------------------------------------------------------------------------------");
-		System.out.println("response_Check_Add_Impression:\n\n"+response_Check_Add_Impression_Response+
-				"\n---------------------------------------------------------------------------------");
-		System.out.println("response_Check_Checkout:\n\n"+response_Check_Checkout_Response+
-				"\n---------------------------------------------------------------------------------");
 						
 	}
 	

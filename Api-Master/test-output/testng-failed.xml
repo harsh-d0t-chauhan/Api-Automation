@@ -5,7 +5,7 @@
     <classes>
       <class name="api.Main">
         <methods>
-          <include name="null_Check_view_Cart_Cms"/>
+          <include name="null_Check_Get_Coupons" invocation-numbers="0"/>
         </methods>
       </class> <!-- api.Main -->
     </classes>
