@@ -1,7 +1,7 @@
 package resources;
 
 import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.not;
+import static org.hamcrest.Matchers.*;
 
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
@@ -50,14 +50,14 @@ public class ValidateResponse extends ReusableMethods {
 	public static String nullCheckViewCartCms(Response res,int expectedStatusCode) {
 		if(res.getStatusCode()==200 && expectedStatusCode==200) {
 		res.then().body("cartPage", not(equalTo(null)),
-				"oosPage",not(equalTo(null)));
+				"oosPage",not(equalTo(null))).time(lessThan(3000L));
 		String [] str = {"cartPage","oosPage"};
 		return getStatus(res)+genrateResponse(res,str);
 		}
 		return getStatus(res)+res.then().assertThat().statusCode(expectedStatusCode).extract().asString();
 	}
 	public static String nullCheckCoupons(Response res,int expectedStatusCode) {
-		res.then().body("coupons", not(equalTo(null)));
+		res.then().body("coupons", not(equalTo(null))).statusCode(expectedStatusCode);
 				
 		String [] str = {"coupons"};
 		return getStatus(res)+genrateResponse(res, str);
@@ -68,35 +68,35 @@ public class ValidateResponse extends ReusableMethods {
 				"parent_order",not(equalTo(null)),
 				"order_id",not(equalTo(null)),
 				"status_seq",not(equalTo(null)),
-				"status",equalTo(200));
+				"status",equalTo(200)).statusCode(expectedStatusCode);
 		String [] str = {"quantity","parent_order","order_id","status_seq","status" };
 		return getStatus(res)+genrateResponse(res, str)+getArrayValues(res, "order_state_details","status" );
 
 	}
 	public static String nullCheckPincode(Response res,int expectedStatusCode) {
-		res.then().body("city", not(equalTo(null)));
+		res.then().body("city", not(equalTo(null))).statusCode(expectedStatusCode);
 		String [] str = {"city"};
 		return getStatus(res)+genrateResponse(res, str);
 	}
 	public static String nullCheckCheckout(Response res,int expectedStatusCode) {
-		res.then().assertThat().body("checkoutPage",not(equalTo(null)));
+		res.then().assertThat().body("checkoutPage",not(equalTo(null))).statusCode(expectedStatusCode);
 		String [] str = {"checkoutPage"};
 		return getStatus(res)+genrateResponse(res, str);
 	}
 	public static String nullCheckOrderDetails(Response res,int expectedStatusCode) {
-		res.then().body("order_id",not(equalTo(null)));
+		res.then().body("order_id",not(equalTo(null))).statusCode(expectedStatusCode);
 		String [] str = {"order_id"};
 		return getStatus(res)+genrateResponse(res, str);
 
 	}
 	public static String responseCheckSetOneSingleUserId(Response res,int expectedStatusCode) {
-		res.then().body("message",equalTo("CONFIGS_SET_SUCCESSFULLY"));
+		res.then().body("message",equalTo("CONFIGS_SET_SUCCESSFULLY")).statusCode(expectedStatusCode);
 		String [] str = {"message"};
 		return getStatus(res)+genrateResponse(res, str);
 
 	}
 	public static String responseCheckAddImpression(Response res,int expectedStatusCode) throws Exception {
-		String str = res.then().contentType(ContentType.TEXT).extract().response().body().asString();
+		String str = res.then().contentType(ContentType.TEXT).statusCode(expectedStatusCode).extract().response().body().asString();
 		if(str.equals("success")==false)
 			throw new Exception("not getting success in response"); 
 		return	getStatus(res)+str;
@@ -104,14 +104,40 @@ public class ValidateResponse extends ReusableMethods {
 
 	public static void authanticationCheck(Response res,int expectedStatusCode) throws Exception {
 		
-		JsonPath js = new JsonPath(res.then().extract().response().body().asString());
+		JsonPath js = new JsonPath(res.then().statusCode(expectedStatusCode).extract().response().body().asString());
 		if((js.getString("homePage")) == null) {
 			throw new Exception("Authorization Fail");   
 			
 		}
 	}
+	
+	//Support API
+	public static String responseCheckCustomerMainList(Response res, int expectedStatusCode) {
+		res.then().assertThat().statusCode(expectedStatusCode).time(lessThan(3000L)).extract().asString();
+			return getStatus(res);
+		
+	}
+	public static String responseCheckCxNew(Response res, int expectedStatusCode) {
+		res.then().assertThat().statusCode(expectedStatusCode).time(lessThan(3000L)).extract().asString();
+		return getStatus(res);
+	}
+	public static String responseCheckTicket(Response res, int expectedStatusCode) {
+		res.then().assertThat().statusCode(expectedStatusCode).time(lessThan(3000L)).extract().asString();
+		return getStatus(res);
+	}
+	public static String responseCheckLanguage(Response res, int expectedStatusCode) {
+		res.then().assertThat().statusCode(expectedStatusCode).time(lessThan(3000L)).extract().asString();
+		return getStatus(res);
+	}
+	public static String responseCheckImage(Response res, int expectedStatusCode) {
+		String str = res.then().assertThat().statusCode(expectedStatusCode).time(lessThan(3000L)).extract().response().asString();
+		return getStatus(res)+str;
+	}
+
+
+
 		
 	
 	
-
+	
 }

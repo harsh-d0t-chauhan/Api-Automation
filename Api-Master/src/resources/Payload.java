@@ -1,8 +1,17 @@
 package resources;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
 public class Payload {
-	
-	public static String set_One_Single_User_Id_Payload(){
+	static String getProperty(String str) throws IOException{
+		 Properties prop = new Properties();
+		FileInputStream ip = new FileInputStream("src\\resources\\config.properties");
+		prop.load(ip);
+		return prop.getProperty(str);
+	}
+	public static String set_One_Single_User_Id_Payload() throws IOException{
 		return "{\r\n"
 				+ "    \"codepushVersion\": \"v70\",\r\n"
 				+ "    \"fcm_token\": \"ecM6aqU3R228-jabY5TPgP:APA91bG22_JaNTM3fnMjtrHvUJB8XtdGkOv8zjf3clsDt2Ebs46Q6vvFNMfJXqhnR_s6Qv7Mvu7x4esfNCAkAJUK-3JCXKQfe8uhrfJF02jaMZMqjYF991KyA3khFFIJA-R9kMd8UqbQ\",\r\n"
@@ -19,9 +28,8 @@ public class Payload {
 				+ "    \"ct_ab_self_order_yes\"]\r\n"
 				+ "}\r\n"
 				+ "";
-		
-	}
-	public static String add_Impression_Payload() {
+		}
+	public static String add_Impression_Payload() throws IOException {
 		return "{\r\n"
 				+ "  \"impressions\": [{\r\n"
 				+ "  \"session_id\": \"377ccb37-5d93-4e75-aebb-04d23e338450\",\r\n"
@@ -52,13 +60,31 @@ public class Payload {
 				+ "  }]\r\n"
 				+ "}";
 	}
-	public static String cancle_Payload() {
+	public static String cancle_Payload() throws IOException {
+		return getProperty("cancle_Payload");
+		}
+	public static String cx_New_Payload() throws IOException {
 		return "{\r\n"
-				+ "  \"orderId\": \" 11165844 \",\r\n"
-				+ "  \"cancellationReason\": \"PRICE_CHANGED\", \r\n"
-				+ "  \"cancellationOtherReason\": \"\"\r\n"
-				+ "  }\r\n"
-				+ "";
-	}
+				+ "  \"response\": [\r\n"
+				+ "    {\r\n"
+				+ "      \"dataKey\": \"CUSTOMER_MAIN_LIST\",\r\n"
+				+ "      \"render\": \"LINK\",\r\n"
+				+ "      \"value\": \"LEADER_BEHAVIOUR\"\r\n"
+				+ "    },\r\n"
+				+ "    {\r\n"
+				+ "      \"dataKey\": \"LEADER_BEHAVIOUR\",\r\n"
+				+ "      \"render\": \"LINK\",\r\n"
+				+ "      \"value\": \"UNABLE_TO_CONNECT_WITH_MY_LEADER\"\r\n"
+				+ "    },\r\n"
+				+ "    {\r\n"
+				+ "      \"dataKey\": \"EXPLAIN_IN_DETAIL\",\r\n"
+				+ "      \"render\": \"FORM\",\r\n"
+				+ "      \"value\": {\r\n"
+				+ "        \"issueDescription\": \"Mxnxnx\"\r\n"
+				+ "      }\r\n"
+				+ "    }\r\n"
+				+ "  ]\r\n"
+				+ "}";
+		}
 
 }

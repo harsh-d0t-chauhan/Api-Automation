@@ -7,7 +7,6 @@ import java.util.HashMap;
 
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import io.restassured.response.ValidatableResponse;
 
 public class ReusableMethods {
 	
@@ -50,7 +49,7 @@ public class ReusableMethods {
 	}
 	public static String getStatus(Response res) {
 		return "Status Line : "
-				+res.getStatusLine()+"\n";
+				+res.getStatusLine()+"\n"+"Response Time : "+res.getTime()+"ms\n";
 	}
 	public static void printResponse(HashMap<String,ArrayList<String>> map) {
 		for ( String key : map.keySet() ) {

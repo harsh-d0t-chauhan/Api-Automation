@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="13" passed="13" failed="0" skipped="0">
+<testng-results ignored="0" total="18" passed="18" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-06-02T15:08:51 IST" name="Default suite" finished-at="2022-06-02T15:09:04 IST" duration-ms="13449">
+  <suite started-at="2022-06-03T16:26:54 IST" name="Default suite" finished-at="2022-06-03T16:27:04 IST" duration-ms="10059">
     <groups>
     </groups>
-    <test started-at="2022-06-02T15:08:51 IST" name="Default test" finished-at="2022-06-02T15:09:04 IST" duration-ms="13449">
+    <test started-at="2022-06-03T16:26:54 IST" name="Default test" finished-at="2022-06-03T16:27:04 IST" duration-ms="10059">
       <class name="api.Main">
-        <test-method signature="authorization_Check(java.lang.String,int)[pri:0, instance:api.Main@5c18016b]" started-at="2022-06-02T15:08:51 IST" name="authorization_Check" data-provider="Setup4" finished-at="2022-06-02T15:08:56 IST" duration-ms="5308" status="PASS">
+        <test-method signature="authorization_Check(java.lang.String,int)[pri:0, instance:api.Main@7c098bb3]" started-at="2022-06-03T16:26:54 IST" name="authorization_Check" data-provider="Setup4" finished-at="2022-06-03T16:26:58 IST" duration-ms="4191" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,7 +23,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- authorization_Check -->
-        <test-method signature="null_Check_Setup4(java.lang.String,int)[pri:1, instance:api.Main@5c18016b]" started-at="2022-06-02T15:08:56 IST" name="null_Check_Setup4" data-provider="Setup4" finished-at="2022-06-02T15:08:58 IST" duration-ms="1819" status="PASS">
+        <test-method signature="null_Check_Setup4(java.lang.String,int)[pri:1, instance:api.Main@7c098bb3]" started-at="2022-06-03T16:26:58 IST" name="null_Check_Setup4" data-provider="Setup4" finished-at="2022-06-03T16:26:59 IST" duration-ms="936" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -39,7 +39,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- null_Check_Setup4 -->
-        <test-method signature="null_Check_Cl_Address(java.lang.String,int)[pri:2, instance:api.Main@5c18016b]" started-at="2022-06-02T15:08:58 IST" name="null_Check_Cl_Address" data-provider="address" finished-at="2022-06-02T15:08:59 IST" duration-ms="809" status="PASS">
+        <test-method signature="null_Check_Cl_Address(java.lang.String,int)[pri:2, instance:api.Main@7c098bb3]" started-at="2022-06-03T16:26:59 IST" name="null_Check_Cl_Address" data-provider="address" finished-at="2022-06-03T16:26:59 IST" duration-ms="350" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -55,11 +55,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- null_Check_Cl_Address -->
-        <test-method signature="null_Check_Cl_Address(java.lang.String,int)[pri:2, instance:api.Main@5c18016b]" started-at="2022-06-02T15:08:59 IST" name="null_Check_Cl_Address" data-provider="address" finished-at="2022-06-02T15:09:00 IST" duration-ms="1282" status="PASS">
+        <test-method signature="null_Check_Cl_Address(java.lang.String,int)[pri:2, instance:api.Main@7c098bb3]" started-at="2022-06-03T16:26:59 IST" name="null_Check_Cl_Address" data-provider="address" finished-at="2022-06-03T16:27:01 IST" duration-ms="1292" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[/api/cl-user/profile/addresss]]>
+                <![CDATA[/api/cl-user/profile/addres]]>
               </value>
             </param>
             <param index="1">
@@ -71,7 +71,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- null_Check_Cl_Address -->
-        <test-method signature="null_Check_view_Cart_Cms(java.lang.String,int)[pri:3, instance:api.Main@5c18016b]" started-at="2022-06-02T15:09:00 IST" name="null_Check_view_Cart_Cms" data-provider="ViewCartCms" finished-at="2022-06-02T15:09:01 IST" duration-ms="1181" status="PASS">
+        <test-method signature="null_Check_view_Cart_Cms(java.lang.String,int)[pri:3, instance:api.Main@7c098bb3]" started-at="2022-06-03T16:27:01 IST" name="null_Check_view_Cart_Cms" data-provider="ViewCartCms" finished-at="2022-06-03T16:27:01 IST" duration-ms="360" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -87,7 +87,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- null_Check_view_Cart_Cms -->
-        <test-method signature="null_Check_Get_Coupons(java.lang.String,int)[pri:4, instance:api.Main@5c18016b]" started-at="2022-06-02T15:09:01 IST" name="null_Check_Get_Coupons" data-provider="Coupons" finished-at="2022-06-02T15:09:02 IST" duration-ms="393" status="PASS">
+        <test-method signature="null_Check_Get_Coupons(java.lang.String,int)[pri:4, instance:api.Main@7c098bb3]" started-at="2022-06-03T16:27:01 IST" name="null_Check_Get_Coupons" data-provider="Coupons" finished-at="2022-06-03T16:27:01 IST" duration-ms="232" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -103,7 +103,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- null_Check_Get_Coupons -->
-        <test-method signature="null_Check_Order_State(java.lang.String,int)[pri:5, instance:api.Main@5c18016b]" started-at="2022-06-02T15:09:02 IST" name="null_Check_Order_State" data-provider="OrderState" finished-at="2022-06-02T15:09:02 IST" duration-ms="757" status="PASS">
+        <test-method signature="null_Check_Order_State(java.lang.String,int)[pri:5, instance:api.Main@7c098bb3]" started-at="2022-06-03T16:27:01 IST" name="null_Check_Order_State" data-provider="OrderState" finished-at="2022-06-03T16:27:02 IST" duration-ms="388" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -119,7 +119,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- null_Check_Order_State -->
-        <test-method signature="null_Check_Get_City_From_Pincode(java.lang.String,int)[pri:6, instance:api.Main@5c18016b]" started-at="2022-06-02T15:09:02 IST" name="null_Check_Get_City_From_Pincode" data-provider="CityFromPinCode" finished-at="2022-06-02T15:09:03 IST" duration-ms="352" status="PASS">
+        <test-method signature="null_Check_Get_City_From_Pincode(java.lang.String,int)[pri:6, instance:api.Main@7c098bb3]" started-at="2022-06-03T16:27:02 IST" name="null_Check_Get_City_From_Pincode" data-provider="CityFromPinCode" finished-at="2022-06-03T16:27:02 IST" duration-ms="228" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -135,7 +135,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- null_Check_Get_City_From_Pincode -->
-        <test-method signature="null_Check_Checkout(java.lang.String,int)[pri:7, instance:api.Main@5c18016b]" started-at="2022-06-02T15:09:03 IST" name="null_Check_Checkout" data-provider="CheckOut" finished-at="2022-06-02T15:09:03 IST" duration-ms="513" status="PASS">
+        <test-method signature="null_Check_Checkout(java.lang.String,int)[pri:7, instance:api.Main@7c098bb3]" started-at="2022-06-03T16:27:02 IST" name="null_Check_Checkout" data-provider="CheckOut" finished-at="2022-06-03T16:27:02 IST" duration-ms="381" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -151,7 +151,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- null_Check_Checkout -->
-        <test-method signature="null_Check_Order_Details(java.lang.String,int)[pri:8, instance:api.Main@5c18016b]" started-at="2022-06-02T15:09:03 IST" name="null_Check_Order_Details" data-provider="OrderDetails" finished-at="2022-06-02T15:09:04 IST" duration-ms="396" status="PASS">
+        <test-method signature="null_Check_Order_Details(java.lang.String,int)[pri:8, instance:api.Main@7c098bb3]" started-at="2022-06-03T16:27:02 IST" name="null_Check_Order_Details" data-provider="OrderDetails" finished-at="2022-06-03T16:27:02 IST" duration-ms="192" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -167,7 +167,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- null_Check_Order_Details -->
-        <test-method signature="response_Check_Set_One_Single_User_Id(java.lang.String,int)[pri:9, instance:api.Main@5c18016b]" started-at="2022-06-02T15:09:04 IST" name="response_Check_Set_One_Single_User_Id" data-provider="OneSingleUserId" finished-at="2022-06-02T15:09:04 IST" duration-ms="315" status="PASS">
+        <test-method signature="response_Check_Set_One_Single_User_Id(java.lang.String,int)[pri:9, instance:api.Main@7c098bb3]" started-at="2022-06-03T16:27:02 IST" name="response_Check_Set_One_Single_User_Id" data-provider="OneSingleUserId" finished-at="2022-06-03T16:27:03 IST" duration-ms="255" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -183,7 +183,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- response_Check_Set_One_Single_User_Id -->
-        <test-method signature="response_Check_Add_Impression(java.lang.String,int)[pri:10, instance:api.Main@5c18016b]" started-at="2022-06-02T15:09:04 IST" name="response_Check_Add_Impression" data-provider="addImpression" finished-at="2022-06-02T15:09:04 IST" duration-ms="181" status="PASS">
+        <test-method signature="response_Check_Add_Impression(java.lang.String,int)[pri:10, instance:api.Main@7c098bb3]" started-at="2022-06-03T16:27:03 IST" name="response_Check_Add_Impression" data-provider="addImpression" finished-at="2022-06-03T16:27:03 IST" duration-ms="131" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -199,7 +199,87 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- response_Check_Add_Impression -->
-        <test-method signature="print()[pri:100, instance:api.Main@5c18016b]" started-at="2022-06-02T15:09:04 IST" name="print" finished-at="2022-06-02T15:09:04 IST" duration-ms="13" status="PASS">
+        <test-method signature="response_Check_Customer_Main_List(java.lang.String,int)[pri:11, instance:api.Main@7c098bb3]" started-at="2022-06-03T16:27:03 IST" name="response_Check_Customer_Main_List" data-provider="customerMainList" finished-at="2022-06-03T16:27:03 IST" duration-ms="176" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[/api/support/cx/config-new-v2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- response_Check_Customer_Main_List -->
+        <test-method signature="response_Check_Cx_New(java.lang.String,int)[pri:12, instance:api.Main@7c098bb3]" started-at="2022-06-03T16:27:03 IST" name="response_Check_Cx_New" data-provider="cxNew" finished-at="2022-06-03T16:27:03 IST" duration-ms="147" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[/api/support/cx/new]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- response_Check_Cx_New -->
+        <test-method signature="response_Check_Ticket(java.lang.String,int)[pri:13, instance:api.Main@7c098bb3]" started-at="2022-06-03T16:27:03 IST" name="response_Check_Ticket" data-provider="ticket" finished-at="2022-06-03T16:27:03 IST" duration-ms="120" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[/api/support/cx/get-ticket]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- response_Check_Ticket -->
+        <test-method signature="response_Check_Image(java.lang.String,int)[pri:14, instance:api.Main@7c098bb3]" started-at="2022-06-03T16:27:03 IST" name="response_Check_Image" data-provider="image" finished-at="2022-06-03T16:27:04 IST" duration-ms="381" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[/api/media/upload-image]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- response_Check_Image -->
+        <test-method signature="response_Check_Language(java.lang.String,int)[pri:14, instance:api.Main@7c098bb3]" started-at="2022-06-03T16:27:04 IST" name="response_Check_Language" data-provider="language" finished-at="2022-06-03T16:27:04 IST" duration-ms="152" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[/api/cl-user/get-languages]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- response_Check_Language -->
+        <test-method signature="print()[pri:100, instance:api.Main@7c098bb3]" started-at="2022-06-03T16:27:04 IST" name="print" finished-at="2022-06-03T16:27:04 IST" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- print -->
