@@ -1,15 +1,15 @@
 package api;
 
 import io.restassured.response.Response;
+import pojo.Add_Impressions_Payload;
+import pojo.Single_User_Id_Payload;
 import resources.Payload;
 import resources.ReusableMethods;
 import resources.Specifications;
 import resources.Url;
 import resources.ValidateResponse;
-
 import org.testng.annotations.Test;
 import static io.restassured.RestAssured.*;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -45,19 +45,19 @@ public class Main extends Specifications{
 		return res;
 
 	}
-	public static Response getOneSingleUserId(String endpoint) throws IOException {
-		Response res = given().spec(request()).body(Payload.set_One_Single_User_Id_Payload())
+	public static Response getOneSingleUserId(String endpoint,Single_User_Id_Payload payload) throws IOException {
+		
+		Response res = given().spec(request()).body(payload)
 				.when().post(endpoint);
 		return res;
 
 	}
-	public static Response getAddImpression(String endpoint) throws IOException {
-		Response res = given().spec(request()).body(Payload.add_Impression_Payload())
+	public static Response getAddImpression(String endpoint,Add_Impressions_Payload payload) throws IOException {
+		Response res = given().spec(request()).body(payload)
 				.when().post(endpoint);
 		return res;
 
 	}
-
 	public static  Response getClUserAddress(String endpoint) throws FileNotFoundException {
 			Response res =	given().spec(request())
 					.when().get(endpoint);
@@ -73,10 +73,9 @@ public class Main extends Specifications{
 				.when().get(endpoint);
 		return res;
 	}
-	
-	public static Response getOrderState(String endpoint) throws FileNotFoundException {
+	public static Response getOrderState(String endpoint,String queryParam) throws FileNotFoundException {
 
-		Response res = given().urlEncodingEnabled(false).spec(request()).queryParam("order_id","011165844")
+		Response res = given().urlEncodingEnabled(false).spec(request()).queryParam("order_id",queryParam)
 				.when().get(endpoint);
 		return res;
 	}
@@ -127,59 +126,61 @@ public class Main extends Specifications{
 		return res;
 	}
 
-
-
-	@Test(priority = 0,dataProvider = "Setup4",dataProviderClass = Url.class)
-	public  void authorization_Check(String endpoint,int expectedStatusCode) throws Exception {
-		ValidateResponse.authanticationCheck(getSetup4(endpoint),expectedStatusCode);		
-	 	
-	}
-	@Test(priority = 1,dataProvider = "Setup4",dataProviderClass = Url.class)
-	public  void null_Check_Setup4(String endpoint,int expectedStatusCode) throws Exception {		
-				ValidateResponse.nullCheckSetup4(getSetup4(endpoint),expectedStatusCode);
-				
-	}
+//############################################################################################
 	
-	@Test(priority = 2,dataProvider = "address",dataProviderClass = Url.class)
+	@Test(priority = 0,dataProvider = "address",dataProviderClass = Url.class)
 	public void null_Check_Cl_Address(String endpoint,int expectedStatusCode) throws FileNotFoundException {
 			null_Check_Cl_Address_Response.add( ValidateResponse.nullCheckClAddress(getClUserAddress(endpoint),expectedStatusCode));
 		
-	
 	}
-	@Test(priority = 3,dataProvider = "ViewCartCms",dataProviderClass = Url.class)
+
+	
+	@Test(priority = 1,dataProvider = "ViewCartCms",dataProviderClass = Url.class)
 	public void null_Check_view_Cart_Cms(String endpoint,int expectedStatusCode) throws FileNotFoundException {
 		null_Check_view_Cart_Cms_Response.add( ValidateResponse.nullCheckViewCartCms(getViewCartCms(endpoint),expectedStatusCode));
 	}
-	@Test(priority = 4,dataProvider = "Coupons",dataProviderClass = Url.class)
+	
+	
+	@Test(priority = 2,dataProvider = "Coupons",dataProviderClass = Url.class)
 	public void null_Check_Get_Coupons(String endpoint,int expectedStatusCode) throws FileNotFoundException {
 		null_Check_Get_Coupons_Response.add(ValidateResponse.nullCheckCoupons(getCoupons(endpoint),expectedStatusCode));
 	}
-	@Test(priority = 5,dataProvider = "OrderState",dataProviderClass = Url.class)
-	public void null_Check_Order_State(String endpoint,int expectedStatusCode) throws FileNotFoundException {
-		null_Check_Order_State_Response.add(ValidateResponse.nullCheckOrderState(getOrderState(endpoint),expectedStatusCode));
+	@Test(priority = 3,dataProvider = "OrderState",dataProviderClass = Url.class)
+	public void null_Check_Order_State(String endpoint,String queryParam,int expectedStatusCode) throws FileNotFoundException {
+		null_Check_Order_State_Response.add(ValidateResponse.nullCheckOrderState(getOrderState(endpoint,queryParam),expectedStatusCode));
 	}
-	@Test(priority = 6,dataProvider = "CityFromPinCode",dataProviderClass = Url.class)
+	@Test(priority = 4,dataProvider = "CityFromPinCode",dataProviderClass = Url.class)
 	public void null_Check_Get_City_From_Pincode(String endpoint,int expectedStatusCode) throws FileNotFoundException {
 		null_Check_Get_City_From_Pincode_Response.add(ValidateResponse.nullCheckPincode(getCityFromPinCode(endpoint),expectedStatusCode));
 	}
-	
-	@Test(priority = 7,dataProvider = "CheckOut",dataProviderClass = Url.class)
+	@Test(priority = 5,dataProvider = "CheckOut",dataProviderClass = Url.class)
 	public void null_Check_Checkout(String endpoint,int expectedStatusCode) throws FileNotFoundException {
 		null_Check_Checkout_Response.add(ValidateResponse.nullCheckCheckout(getCheckOut(endpoint),expectedStatusCode));
 	}
-	@Test(priority = 8,dataProvider = "OrderDetails",dataProviderClass = Url.class)
+	@Test(priority = 6,dataProvider = "OrderDetails",dataProviderClass = Url.class)
 	public void null_Check_Order_Details(String endpoint,int expectedStatusCode) throws FileNotFoundException {
 		null_Check_Order_Details_Response.add(ValidateResponse.nullCheckOrderDetails(getOrderDetails(endpoint),expectedStatusCode));
 		
 	}
-	@Test(priority = 9,dataProvider = "OneSingleUserId",dataProviderClass = Url.class)
-	public void response_Check_Set_One_Single_User_Id(String endpoint,int expectedStatusCode) throws Throwable {
-		response_Check_Set_One_Single_User_Id_Response.add(ValidateResponse.responseCheckSetOneSingleUserId(getOneSingleUserId(endpoint),expectedStatusCode));
+	@Test(priority = 7,dataProvider = "OneSingleUserId",dataProviderClass = Url.class)
+	public void response_Check_Set_One_Single_User_Id(String endpoint,Single_User_Id_Payload payload,int expectedStatusCode) throws Throwable {
+		response_Check_Set_One_Single_User_Id_Response.add(ValidateResponse.responseCheckSetOneSingleUserId(getOneSingleUserId(endpoint,payload),expectedStatusCode));
 	}
-	@Test(priority = 10,dataProvider = "addImpression",dataProviderClass = Url.class)
-	public void response_Check_Add_Impression(String endpoint,int expectedStatusCode) throws Exception {
-		response_Check_Add_Impression_Response.add(ValidateResponse.responseCheckAddImpression(getAddImpression(endpoint),expectedStatusCode));
+	@Test(priority = 8,dataProvider = "addImpression",dataProviderClass = Url.class)
+	public void response_Check_Add_Impression(String endpoint,Add_Impressions_Payload payload,int expectedStatusCode) throws Exception {
+		response_Check_Add_Impression_Response.add(ValidateResponse.responseCheckAddImpression(getAddImpression(endpoint,payload),expectedStatusCode));
 	}
+	@Test(priority = 9,dataProvider = "Setup4",dataProviderClass = Url.class)
+	public  void authorization_Check(String endpoint,int expectedStatusCode) throws Exception {
+		ValidateResponse.authanticationCheck(getSetup4(endpoint),expectedStatusCode);		
+	 	
+	}
+	@Test(priority = 10,dataProvider = "Setup4",dataProviderClass = Url.class)
+	public  void null_Check_Setup4(String endpoint,int expectedStatusCode) throws Exception {		
+				ValidateResponse.nullCheckSetup4(getSetup4(endpoint),expectedStatusCode);
+				
+	}
+
 	
 	// Support API test
 	@Test(priority = 11,dataProvider = "customerMainList",dataProviderClass = Url.class)
@@ -226,9 +227,7 @@ public class Main extends Specifications{
 			put("response_Check_Cx_New",response_Check_Cx_New);
 			put("response_Check_Ticket",response_Check_Ticket);
 			put("response_Check_Language",response_Check_Language);
-			put("response_Check_Image",response_Check_Image);
-			
-						
+			put("response_Check_Image",response_Check_Image);			
 		}}; 
 		ReusableMethods.printResponse(map);
 		

@@ -5,8 +5,8 @@
     <classes>
       <class name="api.Main">
         <methods>
-          <include name="response_Check_Image" invocation-numbers="0"/>
-          <include name="response_Check_Language" invocation-numbers="0"/>
+          <include name="null_Check_Order_State" invocation-numbers="1 2"/>
+          <include name="null_Check_Get_City_From_Pincode" invocation-numbers="1 2"/>
         </methods>
       </class> <!-- api.Main -->
     </classes>

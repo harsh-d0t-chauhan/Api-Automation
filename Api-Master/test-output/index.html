@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\HP\AppData\Local\Temp\testng-eclipse-1803166498\testng-customsuite.xml</span>
+                    <span>C:\Users\HP\AppData\Local\Temp\testng-eclipse-1114032448\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,36 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">18 methods,   18 passed</span>
+                    <span class="method-stats">23 methods, 4 failed,   19 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="api.Main" class="method navigator-link" hash-for-method="null_Check_Get_City_From_Pincode(/api/cl-user/get-city-from-pincode/jhsdj, 400)">null_Check_Get_City_From_Pincode(/api/cl-user/get-city-from-pincode/jhsdj, 400)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="api.Main" class="method navigator-link" hash-for-method="null_Check_Get_City_From_Pincode(/api/cl-user/get-city-from-pincode/12201267, 400)">null_Check_Get_City_From_Pincode(/api/cl-user/get-city-from-pincode/12201267, 400)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="api.Main" class="method navigator-link" hash-for-method="null_Check_Order_State(/api/cl-user/v3/order-states, jahsj, 400)">null_Check_Order_State(/api/cl-user/v3/order-states, jahsj, 400)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="api.Main" class="method navigator-link" hash-for-method="null_Check_Order_State(/api/cl-user/v3/order-states, 01116584418, 204)">null_Check_Order_State(/api/cl-user/v3/order-states, 01116584418, 204)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -114,7 +143,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="api.Main" class="method navigator-link" hash-for-method="null_Check_Cl_Address(/api/cl-user/profile/addres, 404)">null_Check_Cl_Address(/api/cl-user/profile/addres, 404)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="api.Main" class="method navigator-link" hash-for-method="null_Check_Cl_Address(/api/cl-user/profile/city, 404)">null_Check_Cl_Address(/api/cl-user/profile/city, 404)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -139,7 +168,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="api.Main" class="method navigator-link" hash-for-method="null_Check_Order_State(/api/cl-user/v3/order-states, 200)">null_Check_Order_State(/api/cl-user/v3/order-states, 200)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="api.Main" class="method navigator-link" hash-for-method="null_Check_Order_State(/api/cl-user/v3/order-states, 011165844, 200)">null_Check_Order_State(/api/cl-user/v3/order-states, 011165844, 200)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -159,7 +188,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="api.Main" class="method navigator-link" hash-for-method="response_Check_Add_Impression(/api/analytics/add-impression/14312083, 200)">response_Check_Add_Impression(/api/analytics/add-impression/14312083, 200)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="api.Main" class="method navigator-link" hash-for-method="response_Check_Add_Impression(/api/analytics/add-impression/14312083, pojo.Add_Impressions_Payload@5c33008f, 200)">response_Check_Add_Impression(/api/analytics/add-impression/14312083, pojo.Add_Impressions_Payload@5c33008f, 200)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -184,7 +213,12 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="api.Main" class="method navigator-link" hash-for-method="response_Check_Set_One_Single_User_Id(/api/cl-user/set-one-signal-user-id, 200)">response_Check_Set_One_Single_User_Id(/api/cl-user/set-one-signal-user-id, 200)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="api.Main" class="method navigator-link" hash-for-method="response_Check_Set_One_Single_User_Id(/api/cl-user/set-one-signal-user-id, pojo.Single_User_Id_Payload@49232c6f, 200)">response_Check_Set_One_Single_User_Id(/api/cl-user/set-one-signal-user-id, pojo.Single_User_Id_Payload@49232c6f, 200)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="api.Main" class="method navigator-link" hash-for-method="response_Check_Set_One_Single_User_Id(/api/cl-user/set-one-signal-user-id, pojo.Single_User_Id_Payload@49232c6f, 200)">response_Check_Set_One_Single_User_Id(/api/cl-user/set-one-signal-user-id, pojo.Single_User_Id_Payload@49232c6f, 200)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -204,6 +238,284 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">api.Main</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="null_Check_Get_City_From_Pincode(/api/cl-user/get-city-from-pincode/jhsdj, 400)">
+                  </a> <!-- null_Check_Get_City_From_Pincode(/api/cl-user/get-city-from-pincode/jhsdj, 400) -->
+                  <span class="method-name">null_Check_Get_City_From_Pincode</span>
+                  <span class="parameters">(/api/cl-user/get-city-from-pincode/jhsdj, 400)</span>
+                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;400&gt; but was &lt;200&gt;.
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:505)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:687)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:128)
+	at io.restassured.specification.ResponseSpecification$statusCode$1.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:136)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at resources.ValidateResponse.nullCheckPincode(ValidateResponse.java:82)
+	at api.Main.null_Check_Get_City_From_Pincode(Main.java:154)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="null_Check_Get_City_From_Pincode(/api/cl-user/get-city-from-pincode/12201267, 400)">
+                  </a> <!-- null_Check_Get_City_From_Pincode(/api/cl-user/get-city-from-pincode/12201267, 400) -->
+                  <span class="method-name">null_Check_Get_City_From_Pincode</span>
+                  <span class="parameters">(/api/cl-user/get-city-from-pincode/12201267, 400)</span>
+                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;400&gt; but was &lt;200&gt;.
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:505)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:687)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:128)
+	at io.restassured.specification.ResponseSpecification$statusCode$1.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:136)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at resources.ValidateResponse.nullCheckPincode(ValidateResponse.java:82)
+	at api.Main.null_Check_Get_City_From_Pincode(Main.java:154)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="null_Check_Order_State(/api/cl-user/v3/order-states, jahsj, 400)">
+                  </a> <!-- null_Check_Order_State(/api/cl-user/v3/order-states, jahsj, 400) -->
+                  <span class="method-name">null_Check_Order_State</span>
+                  <span class="parameters">(/api/cl-user/v3/order-states, jahsj, 400)</span>
+                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;400&gt; but was &lt;500&gt;.
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:58)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:505)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:687)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:128)
+	at io.restassured.specification.ResponseSpecification$statusCode$1.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:136)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at resources.ValidateResponse.nullCheckOrderState(ValidateResponse.java:70)
+	at api.Main.null_Check_Order_State(Main.java:150)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="null_Check_Order_State(/api/cl-user/v3/order-states, 01116584418, 204)">
+                  </a> <!-- null_Check_Order_State(/api/cl-user/v3/order-states, 01116584418, 204) -->
+                  <span class="method-name">null_Check_Order_State</span>
+                  <span class="parameters">(/api/cl-user/v3/order-states, 01116584418, 204)</span>
+                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;204&gt; but was &lt;200&gt;.
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:505)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:687)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:128)
+	at io.restassured.specification.ResponseSpecification$statusCode$1.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:136)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at resources.ValidateResponse.nullCheckOrderState(ValidateResponse.java:70)
+	at api.Main.null_Check_Order_State(Main.java:150)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -228,10 +540,10 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="null_Check_Cl_Address(/api/cl-user/profile/addres, 404)">
-                  </a> <!-- null_Check_Cl_Address(/api/cl-user/profile/addres, 404) -->
+                  <a name="null_Check_Cl_Address(/api/cl-user/profile/city, 404)">
+                  </a> <!-- null_Check_Cl_Address(/api/cl-user/profile/city, 404) -->
                   <span class="method-name">null_Check_Cl_Address</span>
-                  <span class="parameters">(/api/cl-user/profile/addres, 404)</span>
+                  <span class="parameters">(/api/cl-user/profile/city, 404)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -268,10 +580,10 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="null_Check_Order_State(/api/cl-user/v3/order-states, 200)">
-                  </a> <!-- null_Check_Order_State(/api/cl-user/v3/order-states, 200) -->
+                  <a name="null_Check_Order_State(/api/cl-user/v3/order-states, 011165844, 200)">
+                  </a> <!-- null_Check_Order_State(/api/cl-user/v3/order-states, 011165844, 200) -->
                   <span class="method-name">null_Check_Order_State</span>
-                  <span class="parameters">(/api/cl-user/v3/order-states, 200)</span>
+                  <span class="parameters">(/api/cl-user/v3/order-states, 011165844, 200)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -299,10 +611,10 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="response_Check_Add_Impression(/api/analytics/add-impression/14312083, 200)">
-                  </a> <!-- response_Check_Add_Impression(/api/analytics/add-impression/14312083, 200) -->
+                  <a name="response_Check_Add_Impression(/api/analytics/add-impression/14312083, pojo.Add_Impressions_Payload@5c33008f, 200)">
+                  </a> <!-- response_Check_Add_Impression(/api/analytics/add-impression/14312083, pojo.Add_Impressions_Payload@5c33008f, 200) -->
                   <span class="method-name">response_Check_Add_Impression</span>
-                  <span class="parameters">(/api/analytics/add-impression/14312083, 200)</span>
+                  <span class="parameters">(/api/analytics/add-impression/14312083, pojo.Add_Impressions_Payload@5c33008f, 200)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -339,10 +651,18 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="response_Check_Set_One_Single_User_Id(/api/cl-user/set-one-signal-user-id, 200)">
-                  </a> <!-- response_Check_Set_One_Single_User_Id(/api/cl-user/set-one-signal-user-id, 200) -->
+                  <a name="response_Check_Set_One_Single_User_Id(/api/cl-user/set-one-signal-user-id, pojo.Single_User_Id_Payload@49232c6f, 200)">
+                  </a> <!-- response_Check_Set_One_Single_User_Id(/api/cl-user/set-one-signal-user-id, pojo.Single_User_Id_Payload@49232c6f, 200) -->
                   <span class="method-name">response_Check_Set_One_Single_User_Id</span>
-                  <span class="parameters">(/api/cl-user/set-one-signal-user-id, 200)</span>
+                  <span class="parameters">(/api/cl-user/set-one-signal-user-id, pojo.Single_User_Id_Payload@49232c6f, 200)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="response_Check_Set_One_Single_User_Id(/api/cl-user/set-one-signal-user-id, pojo.Single_User_Id_Payload@49232c6f, 200)">
+                  </a> <!-- response_Check_Set_One_Single_User_Id(/api/cl-user/set-one-signal-user-id, pojo.Single_User_Id_Payload@49232c6f, 200) -->
+                  <span class="method-name">response_Check_Set_One_Single_User_Id</span>
+                  <span class="parameters">(/api/cl-user/set-one-signal-user-id, pojo.Single_User_Id_Payload@49232c6f, 200)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -358,7 +678,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\HP\AppData\Local\Temp\testng-eclipse-1803166498\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\HP\AppData\Local\Temp\testng-eclipse-1114032448\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -407,84 +727,104 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(18);
+data.addRows(23);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'authorization_Check')
+data.setCell(0, 1, 'null_Check_Cl_Address')
 data.setCell(0, 2, 'api.Main')
-data.setCell(0, 3, 4191);
+data.setCell(0, 3, 7505);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'null_Check_Cl_Address')
+data.setCell(1, 1, 'null_Check_view_Cart_Cms')
 data.setCell(1, 2, 'api.Main')
-data.setCell(1, 3, 1292);
+data.setCell(1, 3, 1657);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'null_Check_Setup4')
+data.setCell(2, 1, 'authorization_Check')
 data.setCell(2, 2, 'api.Main')
-data.setCell(2, 3, 936);
+data.setCell(2, 3, 1357);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'null_Check_Order_State')
+data.setCell(3, 1, 'response_Check_Set_One_Single_User_Id')
 data.setCell(3, 2, 'api.Main')
-data.setCell(3, 3, 388);
+data.setCell(3, 3, 1207);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'response_Check_Image')
+data.setCell(4, 1, 'null_Check_Setup4')
 data.setCell(4, 2, 'api.Main')
-data.setCell(4, 3, 381);
+data.setCell(4, 3, 971);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'null_Check_Checkout')
+data.setCell(5, 1, 'null_Check_Order_State')
 data.setCell(5, 2, 'api.Main')
-data.setCell(5, 3, 381);
+data.setCell(5, 3, 876);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'null_Check_view_Cart_Cms')
+data.setCell(6, 1, 'response_Check_Image')
 data.setCell(6, 2, 'api.Main')
-data.setCell(6, 3, 360);
+data.setCell(6, 3, 595);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'null_Check_Cl_Address')
+data.setCell(7, 1, 'null_Check_Checkout')
 data.setCell(7, 2, 'api.Main')
-data.setCell(7, 3, 350);
+data.setCell(7, 3, 352);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'response_Check_Set_One_Single_User_Id')
+data.setCell(8, 1, 'null_Check_Get_Coupons')
 data.setCell(8, 2, 'api.Main')
-data.setCell(8, 3, 255);
+data.setCell(8, 3, 284);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'null_Check_Get_Coupons')
+data.setCell(9, 1, 'null_Check_Order_State')
 data.setCell(9, 2, 'api.Main')
-data.setCell(9, 3, 232);
+data.setCell(9, 3, 257);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'null_Check_Get_City_From_Pincode')
+data.setCell(10, 1, 'null_Check_Order_Details')
 data.setCell(10, 2, 'api.Main')
-data.setCell(10, 3, 228);
+data.setCell(10, 3, 231);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'null_Check_Order_Details')
+data.setCell(11, 1, 'response_Check_Customer_Main_List')
 data.setCell(11, 2, 'api.Main')
-data.setCell(11, 3, 192);
+data.setCell(11, 3, 223);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'response_Check_Customer_Main_List')
+data.setCell(12, 1, 'response_Check_Add_Impression')
 data.setCell(12, 2, 'api.Main')
-data.setCell(12, 3, 176);
+data.setCell(12, 3, 209);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'response_Check_Language')
+data.setCell(13, 1, 'null_Check_Cl_Address')
 data.setCell(13, 2, 'api.Main')
-data.setCell(13, 3, 152);
+data.setCell(13, 3, 202);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'response_Check_Cx_New')
+data.setCell(14, 1, 'null_Check_Order_State')
 data.setCell(14, 2, 'api.Main')
-data.setCell(14, 3, 147);
+data.setCell(14, 3, 201);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'response_Check_Add_Impression')
+data.setCell(15, 1, 'response_Check_Cx_New')
 data.setCell(15, 2, 'api.Main')
-data.setCell(15, 3, 131);
+data.setCell(15, 3, 198);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'response_Check_Ticket')
+data.setCell(16, 1, 'null_Check_Get_City_From_Pincode')
 data.setCell(16, 2, 'api.Main')
-data.setCell(16, 3, 120);
+data.setCell(16, 3, 193);
 data.setCell(17, 0, 17)
-data.setCell(17, 1, 'print')
+data.setCell(17, 1, 'response_Check_Set_One_Single_User_Id')
 data.setCell(17, 2, 'api.Main')
-data.setCell(17, 3, 8);
+data.setCell(17, 3, 192);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'null_Check_Get_City_From_Pincode')
+data.setCell(18, 2, 'api.Main')
+data.setCell(18, 3, 149);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'null_Check_Get_City_From_Pincode')
+data.setCell(19, 2, 'api.Main')
+data.setCell(19, 3, 145);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'response_Check_Language')
+data.setCell(20, 2, 'api.Main')
+data.setCell(20, 3, 142);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'response_Check_Ticket')
+data.setCell(21, 2, 'api.Main')
+data.setCell(21, 3, 132);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'print')
+data.setCell(22, 2, 'api.Main')
+data.setCell(22, 3, 7);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 seconds</span>
+              <span class="suite-total-time">Total running time: 17 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -512,76 +852,104 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">api.Main</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">authorization_Check(/api/cl-user/setup-4, 200)</span>
+                <span class="method-name">null_Check_Cl_Address(/api/cl-user/profile/address, 200)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">null_Check_Setup4(/api/cl-user/setup-4, 200)</span>
-                <span class="method-start">4201 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">null_Check_Cl_Address(/api/cl-user/profile/address, 200)</span>
-                <span class="method-start">5141 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">null_Check_Cl_Address(/api/cl-user/profile/addres, 404)</span>
-                <span class="method-start">5493 ms</span>
+                <span class="method-name">null_Check_Cl_Address(/api/cl-user/profile/city, 404)</span>
+                <span class="method-start">7510 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">null_Check_view_Cart_Cms(/api/cl-user/view-cart-cms, 200)</span>
-                <span class="method-start">6790 ms</span>
+                <span class="method-start">7716 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">null_Check_Get_Coupons(/api/cl-user/get-coupons, 200)</span>
-                <span class="method-start">7155 ms</span>
+                <span class="method-start">9381 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">null_Check_Order_State(/api/cl-user/v3/order-states, 200)</span>
-                <span class="method-start">7393 ms</span>
+                <span class="method-name">null_Check_Order_State(/api/cl-user/v3/order-states, 011165844, 200)</span>
+                <span class="method-start">9669 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">null_Check_Order_State(/api/cl-user/v3/order-states, jahsj, 400)</span>
+                <span class="method-start">10548 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">null_Check_Order_State(/api/cl-user/v3/order-states, 01116584418, 204)</span>
+                <span class="method-start">10818 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">null_Check_Get_City_From_Pincode(/api/cl-user/get-city-from-pincode/122012, 200)</span>
-                <span class="method-start">7787 ms</span>
+                <span class="method-start">11027 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">null_Check_Get_City_From_Pincode(/api/cl-user/get-city-from-pincode/12201267, 400)</span>
+                <span class="method-start">11223 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">null_Check_Get_City_From_Pincode(/api/cl-user/get-city-from-pincode/jhsdj, 400)</span>
+                <span class="method-start">11376 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">null_Check_Checkout(/api/cl-user/v2/checkout, 200)</span>
-                <span class="method-start">8018 ms</span>
+                <span class="method-start">11526 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">null_Check_Order_Details(/api/cl-user/order-details-2/11165844, 200)</span>
-                <span class="method-start">8405 ms</span>
+                <span class="method-start">11880 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">response_Check_Set_One_Single_User_Id(/api/cl-user/set-one-signal-user-id, 200)</span>
-                <span class="method-start">8601 ms</span>
+                <span class="method-name">response_Check_Set_One_Single_User_Id(/api/cl-user/set-one-signal-user-id, pojo.Single_User_Id_Payload@49232c6f, 200)</span>
+                <span class="method-start">12118 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">response_Check_Add_Impression(/api/analytics/add-impression/14312083, 200)</span>
-                <span class="method-start">8862 ms</span>
+                <span class="method-name">response_Check_Set_One_Single_User_Id(/api/cl-user/set-one-signal-user-id, pojo.Single_User_Id_Payload@49232c6f, 200)</span>
+                <span class="method-start">13329 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">response_Check_Add_Impression(/api/analytics/add-impression/14312083, pojo.Add_Impressions_Payload@5c33008f, 200)</span>
+                <span class="method-start">13525 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">authorization_Check(/api/cl-user/setup-4, 200)</span>
+                <span class="method-start">13735 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">null_Check_Setup4(/api/cl-user/setup-4, 200)</span>
+                <span class="method-start">15099 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">response_Check_Customer_Main_List(/api/support/cx/config-new-v2, 200)</span>
-                <span class="method-start">8998 ms</span>
+                <span class="method-start">16072 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">response_Check_Cx_New(/api/support/cx/new, 200)</span>
-                <span class="method-start">9179 ms</span>
+                <span class="method-start">16297 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">response_Check_Ticket(/api/support/cx/get-ticket, 200)</span>
-                <span class="method-start">9329 ms</span>
+                <span class="method-start">16499 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">response_Check_Image(/api/media/upload-image, 200)</span>
-                <span class="method-start">9453 ms</span>
+                <span class="method-start">16635 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">response_Check_Language(/api/cl-user/get-languages, 200)</span>
-                <span class="method-start">9837 ms</span>
+                <span class="method-start">17232 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">print</span>
-                <span class="method-start">9990 ms</span>
+                <span class="method-start">17375 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

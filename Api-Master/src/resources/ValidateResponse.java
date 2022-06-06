@@ -63,20 +63,29 @@ public class ValidateResponse extends ReusableMethods {
 		return getStatus(res)+genrateResponse(res, str);
 	}
 	public static String nullCheckOrderState(Response res,int expectedStatusCode) {
-		res.then().body("total_amount", not(equalTo(null)),
+		int statusCode = res.getStatusCode();
+		if(statusCode == expectedStatusCode && statusCode == 500){
+			return getStatus(res)+"Internal Server Error";
+		}
+		res.then().statusCode(expectedStatusCode).body("total_amount", not(equalTo(null)),
 				"quantity",not(equalTo(null)),
 				"parent_order",not(equalTo(null)),
 				"order_id",not(equalTo(null)),
 				"status_seq",not(equalTo(null)),
-				"status",equalTo(200)).statusCode(expectedStatusCode);
+				"status",equalTo(200));
 		String [] str = {"quantity","parent_order","order_id","status_seq","status" };
 		return getStatus(res)+genrateResponse(res, str)+getArrayValues(res, "order_state_details","status" );
 
 	}
 	public static String nullCheckPincode(Response res,int expectedStatusCode) {
+		
+		if(res.then().assertThat().statusCode(expectedStatusCode).extract().response().asString().equalsIgnoreCase("null")) {
+			return getStatus(res)+null;
+		}
 		res.then().body("city", not(equalTo(null))).statusCode(expectedStatusCode);
 		String [] str = {"city"};
 		return getStatus(res)+genrateResponse(res, str);
+		
 	}
 	public static String nullCheckCheckout(Response res,int expectedStatusCode) {
 		res.then().assertThat().body("checkoutPage",not(equalTo(null))).statusCode(expectedStatusCode);
